@@ -1,0 +1,60 @@
+[
+  {
+    "customerId": "uem-sunrise",
+    "description": "3 for 2 on standard ads",
+    "type": "n-for-x",
+    "payload": {
+      "adType": "standardAd",
+      "quantity": 3,
+      "discountedQuantity": 2
+    }
+  },
+  {
+    "customerId": "sime-darby",
+    "description": "299.99 featured ads",
+    "type": "price-drop",
+    "payload": {
+      "adType": "featuredAd",
+      "price": 299.99
+    }
+  },
+  {
+    "customerId": "igb-berhad",
+    "description": "379.99 premium ads on 4 or more",
+    "type": "price-drop-on-n-or-more",
+    "payload": {
+      "adType": "premiumAd",
+      "quantity": 4,
+      "price": 379.99
+    }
+  },
+  {
+    "customerId": "mah-sing",
+    "description": "5 for 4 on standard ads",
+    "type": "n-for-x",
+    "payload": {
+      "adType": "standardAd",
+      "quantity": 5,
+      "discountedQuantity": 4
+    }
+  },
+  {
+    "customerId": "mah-sing",
+    "description": "309.99 featured ads",
+    "type": "price-drop",
+    "payload": {
+      "adType": "featuredAd",
+      "price": 309.99
+    }
+  },
+  {
+    "customerId": "mah-sing",
+    "description": "389.99 premium ads on 3 or more",
+    "type": "price-drop-on-n-or-more",
+    "payload": {
+      "adType": "premiumAd",
+      "quantity": 3,
+      "price": 389.99
+    }
+  }
+]
