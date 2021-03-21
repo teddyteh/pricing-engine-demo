@@ -1,31 +1,20 @@
-import { Checkout } from "./checkout";
-import { defaultItems, igbBerhardItems, mahSingItems, simeDarbyItems, uemSunriseItems } from "./constants/demo";
-import * as pricingRules from "./rules.json";
+import * as Koa from "koa";
+import * as koaBody from "koa-body";
+import * as KoaRouter from "@koa/router";
+import { RegisterRoutes } from "../build/routes";
 
-const customers = [
-  { name: "default", items: defaultItems, message: 'Standard Ads x5, Featured Ads x2, Premium Ads x3' },
-  { name: "UEM Sunrise", items: uemSunriseItems, message: 'Standard Ads x3, Premium Ads x1' },
-  { name: "Sime Darby", items: simeDarbyItems, message: 'Featured Ads x3, Premium Ads x1' },
-  { name: "IGB Berhard", items: igbBerhardItems, message: 'Premium Ads x4' },
-  { name: "Mah Sing", items: mahSingItems, message: 'Standard Ads x5, Featured Ads x2, Premium Ads x3' },
+const port = process.env.PORT || 3000;
 
-];
+const app = new Koa();
 
-console.log(`
- Instahome Assessment
- - Teddy
-`);
+const router = new KoaRouter();
+RegisterRoutes(router);
 
-customers.forEach(customer => {
-  const co = new Checkout(pricingRules);
+app
+  .use(koaBody())
+  .use(router.routes())
+  .use(router.allowedMethods());
 
-  customer.items.forEach(item => co.add(item));
-
-  console.log(`
-    Customer: ${customer.name}
-    Listings scanned: ${customer.message}
-    Total: RM ${co.total()} 
-  `);
-});
-
-console.log(`Run test cases to verify.`);
+app.listen(port, () =>
+  console.log(`Listening at http://localhost:${port}`)
+);

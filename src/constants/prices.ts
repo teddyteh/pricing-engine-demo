@@ -1,4 +1,4 @@
-import { AdType } from './../interfaces/item-type';
+import { AdType } from '../interfaces/itemType';
 
 export const defaultPrices = {
     [AdType.STANDARD_AD]: 269.99,

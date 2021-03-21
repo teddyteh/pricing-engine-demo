@@ -1,6 +1,6 @@
 import { Checkout } from "../checkout";
 import { Item } from "../interfaces/item";
-import { AdType } from "../interfaces/item-type";
+import { AdType } from "../interfaces/itemType";
 import * as pricingRules from "../rules.json";
 
 describe("Customers", () => {

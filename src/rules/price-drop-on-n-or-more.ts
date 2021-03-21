@@ -1,7 +1,7 @@
 
 import { defaultPrices } from "../constants/prices";
 import { Item } from "../interfaces/item";
-import { AdType } from "../interfaces/item-type";
+import { AdType } from "../interfaces/itemType";
 import { BaseRule } from "./base-rule";
 
 interface PriceDropOnNOrMorePayload {

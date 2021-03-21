@@ -18,7 +18,8 @@
     "noImplicitThis": false,
     "strictNullChecks": false,
     "allowUmdGlobalAccess": false,
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "experimentalDecorators": true
   },
   "include": [
     "src/**/*",

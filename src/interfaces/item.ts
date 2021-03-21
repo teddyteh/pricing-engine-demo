@@ -1,4 +1,4 @@
-import { AdType } from "./item-type";
+import { AdType } from "./itemType";
 
 export interface Item {
     customerId: string;

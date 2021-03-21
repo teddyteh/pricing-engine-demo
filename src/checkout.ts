@@ -1,7 +1,7 @@
 import { defaultPrices } from "./constants/prices";
 import { Item } from "./interfaces/item";
-import { AdType } from "./interfaces/item-type";
-import { PricingRule } from './interfaces/pricing-rule';
+import { AdType } from "./interfaces/itemType";
+import { PricingRule } from './interfaces/pricingRule';
 import { ruleFactory } from './rules/rule-factory';
 
 export class Checkout {
